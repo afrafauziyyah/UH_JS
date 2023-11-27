@@ -1,0 +1,23 @@
+<table>
+    <tr>
+        <td><button id="btn1">Mulai Perulangan</button></td>
+    </tr>
+    <tr>
+        <td>
+            <table id="outputTabel">
+            </table>
+        </td>
+    </tr>
+</table>
+<script>
+    document.getElementById("btn1").addEventListener("click", function () {
+        var outputTabel = document.getElementById("outputTabel");
+        outputTabel.innerHTML = ""; 
+        for (var i = 10; i >= 1; i--) {
+            var row = outputTabel.insertRow();
+            var cell = row.insertCell();
+            var sentence = "Anak ayam turun " + i;
+            cell.innerHTML = sentence;
+        }
+    });
+</script>

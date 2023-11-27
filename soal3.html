@@ -1,0 +1,48 @@
+<center>
+    <table>
+        <tr>
+            <td>
+                <label for="usiaInput">Masukkan usia:</label>
+            </td>
+            <td>
+                <input type="number" id="usiaInput">
+            </td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>
+                <button id="cekUsiaButton">Cek Usia</button>
+            </td>
+        </tr>
+    </table>
+    <table id="outputTable">
+        <tr>
+            <th>Usia :</th>
+        </tr>
+        <tr>
+            <th>Keterangan :</th>
+        </tr>
+    </table>
+</center>
+
+<script>
+    document.getElementById("cekUsiaButton").addEventListener("click", function () {
+        var usiaInput = parseInt(document.getElementById("usiaInput").value);
+        var outputTable = document.getElementById("outputTable");
+        var row = outputTable.insertRow();
+
+        if (usiaInput < 0) {
+            row.insertCell().textContent = usiaInput;
+            row.insertCell().textContent = "Usia tidak valid";
+        } else if (usiaInput < 3) {
+            row.insertCell().textContent = usiaInput;
+            row.insertCell().textContent = "Mohon maaf kamu masih balita, nonton upin ipin aja yaa😍";
+        } else if (usiaInput >= 3 && usiaInput < 18) {
+            row.insertCell().textContent = usiaInput;
+            row.insertCell().textContent = "Kamu sudah masuk usia remaja, silahkan menonton!";
+        } else {
+            row.insertCell().textContent = usiaInput;
+            row.insertCell().textContent = "Wow, kamu sudah dewasa, tentu saja boleh menonton!";
+        }
+    });
+</script>

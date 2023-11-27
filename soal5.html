@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Pendaftaran Calon Mahasiswa Baru</title>
+</head>
+<body>
+    <h1>Form Pendaftaran Calon Mahasiswa Baru</h1>
+    <form class="tabel" id="regisForm">
+        <label for="nama">Nama Lengkap :</label>
+        <input type="text" id="nama">
+        <br>
+        <label for="nik">NIK           :</label>
+        <input type="text" id="nik">
+        <br>
+        <label for="email">Email       :</label>
+        <input type="email" id="email">
+        <br>
+        <label for="noTelp">No Telp    :</label>
+        <input type="tel" id="noTelp">
+        <br>
+        <button type="button" id="daftarButton">Daftar</button>
+    </form>
+
+    <script>
+        document.getElementById("daftarButton").addEventListener("click", function () {
+            var nama = document.getElementById("nama").value;
+            var nik = document.getElementById("nik").value;
+            var email = document.getElementById("email").value;
+            var noTelp = document.getElementById("noTelp").value;
+
+            if (nama && nik && email && noTelp) {
+                alert("Terimakasih sudah melakukan pendaftaran!");
+            } else {
+                alert("Anda harus mengisi data dengan lengkap!");
+            }
+        });
+    </script>
+</body>
+
+</html>

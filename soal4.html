@@ -1,0 +1,44 @@
+<center>
+    <table>
+        <tr>
+            <td><label for="sisiA">Sisi A :</label></td>
+            <td><input type="number" id="sisiA"></td>
+        </tr>
+        <tr>
+            <td><label for="sisiB">Sisi B :</label></td>
+            <td><input type="number" id="sisiB"></td>
+        </tr>
+        <tr>
+            <td><label for="sisiC">Sisi C :</label></td>
+            <td><input type="number" id="sisiC"></td>
+        </tr>
+        <tr>
+            <td><label for="sisiD">Sisi D :</label></td>
+            <td><input type="number" id="sisiD"></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><button id="hitungKelilingBtn">Hitung Keliling</button></td>
+        </tr>
+    </table>
+    
+    <table id="outputTabel">
+        <tr>
+            <td>Keliling :</td>
+            <td id="kelilingOutput"></td>
+        </tr>
+    </table>
+</center>
+
+<script>
+    document.getElementById("hitungKelilingBtn").addEventListener("click", function () {
+        var sisiA = parseFloat(document.getElementById("sisiA").value);
+        var sisiB = parseFloat(document.getElementById("sisiB").value);
+        var sisiC = parseFloat(document.getElementById("sisiC").value);
+        var sisiD = parseFloat(document.getElementById("sisiD").value);
+
+        var keliling = sisiA + sisiB + sisiC + sisiD;
+
+        document.getElementById("kelilingOutput").textContent = keliling;
+    });
+</script>
